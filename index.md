@@ -1,7 +1,7 @@
 <ul>
   {% for post in site.posts %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
+      <a href="{{https://github.com/20-1-SKKU-OSS/2020-1-OSS-4/blob/master/_posts/2020-05-16-first-post.md}}">{{ post.title }}</a>
     </li>
   {% endfor %}
 </ul>
