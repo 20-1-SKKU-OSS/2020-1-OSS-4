@@ -1,9 +1,8 @@
 ---
 layout: post
-title:  "ProjectQ " 
+title:  "ProjectQ 소개" 
 ---
 
-# ProjectQ
 프로젝트 소개:
 
 기여방식:
