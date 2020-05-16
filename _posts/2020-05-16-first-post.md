@@ -3,8 +3,7 @@ layout: post
 title:  "ProjectQ"
 ---
 
-# Welcome
+#ProjectQ
+프로젝트 소개:
 
-**Hello world**, this is my first Jekyll blog post.
-
-I hope you like it!
+기여방식:
