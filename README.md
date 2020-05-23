@@ -42,7 +42,6 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
  * 자주 사용되는 알고리즘을 정리하고 그것에 대한 이해를 돕는 프로젝트입니다.
 
 ## 기존 프로젝트 내용
-========
 전체 알고리즘 리스트: [DIRECTORY.md](https://github.com/20-1-SKKU-OSS-4/blob/master/C-master/DIRECTORY.md)
 
 ## LeetCode Algorithm
@@ -165,7 +164,6 @@ In this directory you will find (in the right order):
 This directory contains
 * client.c
 * server.c
-========
 
 
 ## <div id="#how_to">활동 방법</div>
