@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "프로젝트"
+title:  "프로젝트 소개와 기여방안 및 역할"
 ---
 
 
