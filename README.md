@@ -34,7 +34,7 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 
 ** 최영우
 > 이메일: cyw7515@naver.com<br>
-> GitHub ID: <br>
+> GitHub ID: [Yongware](https://github.com/yongware)<br>
 > 경력: 성균관대학교 소프트웨어학과 재학중
 
 ## <div id = "about_project">프로젝트 소개</div>
