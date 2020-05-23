@@ -23,9 +23,9 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 > 경력: 성균관대학교 소프트웨어학과 재학중
 
 **윤태웅<br>
-> 이메일: <br>
-> GitHub ID: <br>
-> 경력: 성균관대학교 소프트웨어학과 재학중
+> 이메일: woongman1109@naver.com<br>
+> GitHub ID: [woongman1109](https://github.com/woongman1109)<br>
+> 경력: 성균관대학교 나노공학과 재학중 / 소프트웨어학과 복수 전공중
 
 **이찬영<br>
 > 이메일: <br>
