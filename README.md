@@ -6,10 +6,10 @@
  * [활동 계획](#plan)
  * [개인별 기여방법](#contribute)
 
-##<div id = "HOME_PAGE">홈페이지</div>
+## <div id = "HOME_PAGE">홈페이지</div>
 https://20-1-skku-oss.github.io/2020-1-OSS-4/
 
-##<div id = "Members">팀소개</div>
+## <div id = "Members">팀소개</div>
 ### 팀장
 **정승혁<br>
 > 이메일: <br>
@@ -37,7 +37,7 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 > GitHub ID: <br>
 > 경력: 성균관대학교 소프트웨어학과 재학중
 
-##<div id = "about_project">프로젝트 소개</div>
+## <div id = "about_project">프로젝트 소개</div>
  * Algorithms/C 프로젝트를 선정했습니다.
  * 자주 사용되는 알고리즘을 정리하고 그것에 대한 이해를 돕는 프로젝트입니다.
 
