@@ -12,8 +12,8 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 ## <div id = "Members">팀소개</div>
 ### 팀장
 ** 정승혁
-> 이메일: <br>
-> GitHub ID: <br>
+> 이메일: tmdgur325@gmail.com<br>
+> GitHub ID: [meltingOcean](https://github.com/meltingocean)<br>
 > 경력: 성균관대학교 소프트웨어학과 재학중
 
 ### 팀원
