@@ -18,8 +18,8 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 
 ### 팀원
 ** 권윤영
-> 이메일: <br>
-> GitHub ID: <br>
+> 이메일: nicesteph@naver.com<br>
+> GitHub ID: [yoonyoungkwon](https://github.com/yoonyoungkwon)<br>
 > 경력: 성균관대학교 소프트웨어학과 재학중
 
 ** 윤태웅
