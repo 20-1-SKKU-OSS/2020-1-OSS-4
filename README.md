@@ -179,10 +179,20 @@ This directory contains
 ## <div id="contribute">개인별 기여방법</div>
 **정승혁(팀장)**
 
+
+
 **권윤영**
+
+
 
 **윤태웅**
 
+
+
 **이찬영**
 
+
+
 **최영우**
+
+
