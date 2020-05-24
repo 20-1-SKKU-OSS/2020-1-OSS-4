@@ -178,21 +178,45 @@ This directory contains
 
 ## <div id="contribute">개인별 기여방법</div>
 **정승혁(팀장)**
-
+> 1. Data Structure 프로젝트<br>
+> > b-tree 등 자주 쓰이는 tree structure 구현<br>
+> > 최신 프로그래밍 동향을 파악해 그에 맞는 Data Structure 구현<br>
+> > 알고리즘적 버그가 있는 부분 수정<br>
+> 2. Issue에 올라온 버그 및 요청 파악<br>
+> 3. ReadMe에 기여한 내용 반영<br>
+> 4. Project 정적페이지 관리<br>
 
 
 **권윤영**
-
-
+> 1. Data Structure 프로젝트 <br>
+> > Double LL과 관련된 라이브러리 구현 <br>
+> > 자주 쓰이나 아직 구현되지 않은 Data Structure 구현 <br>
+> > Data Structure 코드들에 한글 주석 추가 <br>
+> 2. Issue에 올라온 버그 파악 <br>
+> 3. Project 정적페이지 관리 <br>
 
 **윤태웅**
-
-
+> 1. MISC 프로젝트<br>
+> > 행렬 연산 등 C언어 알고리즘 라이브러리 구현<br>
+> > Bitwise Operation 관련 라이브러리 구현<br>
+> 2. Wiki에 기여한 내용 반영<br>
+> 3. 메모리 관리에 대한 전반적 점검<br>
+> > 동적할당 등으로 일어나는 NPE 등의 에러 제거<br>
 
 **이찬영**
-
+> 1. Data Structure 프로젝트<br>
+> > 바이토닝 정렬 등 Data Structur 내의 Sorting 라이브러리 구현<br>
+> > Queue 등 자주 쓰이는 대중적인 Data Structure 구현<br>
+> 2. Wiki에 기여한 내용들 반영<br>
+> 3. Issue 파악 및 관리<br>
 
 
 **최영우**
+> 1. MISC 프로젝트 <br>
+> > C언어 알고리즘 라이브러리 구현<br>
+> > Bitwise Operation 라이브러리 설계 및 구현 <br>
+> > 알고리즘상의 에러 제거 <br>
+> 2. Issue 추가 및 관리 <br>
+> 3. ReadMe 관리 및 기여한 내용 반영<br>
 
 
