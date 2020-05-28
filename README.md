@@ -231,6 +231,7 @@ This directory contains
 **최영우**
 > 1. MISC 프로젝트 <br>
 >  * C언어 알고리즘 라이브러리 구현<br>
+>  * 벡터 및 행렬 연산 관련 라이브러리 구현<br>
 >  * Bitwise Operation 라이브러리 설계 및 구현 <br>
 >  * 알고리즘상의 에러 제거 <br>
 > 2. Issue 추가 및 관리 <br>
