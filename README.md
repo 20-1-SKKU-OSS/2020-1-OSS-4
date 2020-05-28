@@ -45,7 +45,7 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 1. Data Structure Project
 
 2. MISC Project
-> 1) bit단위 연산 라이브러리 생성 및 추가 <br>
+> ## bit단위 연산 라이브러리 생성 및 추가 <br>
 > > * Subtractable_check: 오버플로우 없이 두 정수의 차를 구할 수 있는지 확인<br>
 > > * ByteSwap: 한 정수의 n바이트의 값과 m바이트의 값을 서로 바꿈<br>
 > > * isGreater: 두 정수 중 먼저 입력된 정수가 더 크면 1, 아니면 0을 반환<br>
