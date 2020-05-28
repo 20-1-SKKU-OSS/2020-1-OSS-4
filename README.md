@@ -60,10 +60,11 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 ## 기존 프로젝트 내용
 전체 알고리즘 리스트: [DIRECTORY.md](https://github.com/20-1-SKKU-OSS-4/blob/master/C-master/DIRECTORY.md)
 
-## LeetCode Algorithm
-- [Solution](https://github.com/TheAlgorithms/C/tree/master/leetcode) for [LeetCode](https://leetcode.com/problemset/all/)
+## LeetCode Algorithm (알고리즘 문제풀이 사이트 LeetCode에 올라온 문제에 대한 풀이)
+- [LeetCode](https://leetcode.com/problemset/all/): LeetCode 알고리즘 문제 사이트
+- [Solution](https://github.com/TheAlgorithms/C/tree/master/leetcode): 요청이 들어온 문제나 직접 푼 문제 대한 풀이
 
-## Computer Oriented Statistical Methods
+## Computer Oriented Statistical Methods (통계학적 Method 라이브러리)
 	- Gauss_Elimination
 	- Lagrange_Theorem
 	- Mean
@@ -73,16 +74,16 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 	- Variance
 	- statistic (C Lib)
 
-## Conversions
-	- binary_to_decimal
-	- decimal_to_binary
-	- decimal_to_hexa
-	- decimal_to_octal
-	- to_decimal
-	- hexa_to_octal
+## Conversions (진법 변환)
+	- binary_to_decimal: 2진수에서 10진수로의 변환
+	- decimal_to_binary: 10진수에서 2진수로의 변환
+	- decimal_to_hexa: 10진수에서 16진수로의 변환
+	- decimal_to_octal: 10진수에서 8진수로의 변환
+	- to_decimal: x진수에서 10진수로의 변환
+	- hexa_to_octal: :16진수에서 8진수로의 변환
 
 
-## Data Structures
+## Data Structures (자료구조)
 	- stack
 	- queue
 	- dictionary
@@ -99,7 +100,7 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 		- max heap 
 
 
-## Searching
+## Searching (탐색 방법)
 	- Linear_Search
 	- Binary_Search
 	- Other_Binary_Search
@@ -109,7 +110,7 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 	- Modified_Binary_Search
 
 
-## Sorting
+## Sorting (정렬 방법)
 	- BinaryInsertionSort
 	- BubbleSort
 	- BucketSort
@@ -132,14 +133,14 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 	- StoogeSort
 
 
-## Hashing
+## Hashing (해쉬 함수)
 	- sdbm
 	- djb2
 	- xor8 (8 bit)
 	- adler_32 (32 bit)
 
 
-## Misc
+## Misc (기타 함수)
 	- ArmstrongNumber	
 	- Binning
 	- Factorial
@@ -176,7 +177,7 @@ In this directory you will find (in the right order):
 * word-count
 * rna-transcription
 
-## Simple Client Server Implementation
+## Simple Client Server Implementation (간단한 서버와 사용자 구현)
 This directory contains
 * client.c
 * server.c
