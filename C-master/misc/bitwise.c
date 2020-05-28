@@ -34,10 +34,10 @@ int byteSwap(int x, int n, int m) {
 * isGreater - x와 y의 값을 비교해 x가 더 큰 경우 1, 그 외에는 0을 반환
 */
 int isGreater(int x, int y) {
-	int x_sign = (x >> 31) & 0x1;//����� 0, ������ 1
+	int x_sign = (x >> 31) & 0x1;
 	int y_sign = (y >> 31) & 0x1;
-	int sign_differ = x_sign ^ y_sign;//������ 0, �ٸ��� 1
-	int sub_sign = ((y + ~x + 1) >> 31) & 0x1;//���ų� y�� �� ũ�� 0, ������ 1
+	int sign_differ = x_sign ^ y_sign;
+	int sub_sign = ((y + ~x + 1) >> 31) & 0x1;
 	printf("sign %d %d\n", sign_differ, sub_sign);
 	return ((!x_sign) & sign_differ) | (((~sign_differ & 0x1) & sub_sign));
 }
@@ -47,11 +47,11 @@ int isGreater(int x, int y) {
 */
 
 int fitsbits(int x, int n) {//Can X be expressed by n-bit?
-	int y = 33 + ~n;//�̵���ų Ƚ�� ����
-	int result = (x << y);//�̵���Ű��
-	result = result >> y;//���󺹱�
-	result = result ^ x;//�������� ������ 0, �ٸ��� 1�̻�
-	return !result;//������ 1, �ٸ��� 0
+	int y = 33 + ~n;
+	int result = (x << y);
+	result = result >> y;
+	result = result ^ x;
+	return !result;
 }
 
 /*
@@ -61,7 +61,7 @@ int fitsbits(int x, int n) {//Can X be expressed by n-bit?
 int logicalShift(int x, int n) {
 	int bit = 32 + ~n + 1;
 	int full = (0xff << 24) + (0xff << 16) + (0xff << 8) + 0xff;
-	int mask = ~(full << bit + ~1 +1 << 1);//32�и� �ȹи�;;
+	int mask = ~(full << bit + ~1 +1 << 1);
 	printf("%d %x %x\n", bit, full, full << bit-1 << 1);
 	return (x >> n) & mask;
 }
