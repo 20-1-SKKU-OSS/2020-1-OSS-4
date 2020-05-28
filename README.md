@@ -60,7 +60,7 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 ## 기존 프로젝트 내용
 전체 알고리즘 리스트: [DIRECTORY.md](https://github.com/20-1-SKKU-OSS-4/blob/master/C-master/DIRECTORY.md)
 
-## LeetCode Algorithm (알고리즘 문제풀이 사이트 LeetCode에 올라온 문제에 대한 풀이)
+## LeetCode Algorithm (문제풀이 사이트 LeetCode에 올라온 문제에 대한 풀이)
 - [LeetCode](https://leetcode.com/problemset/all/): LeetCode 알고리즘 문제 사이트
 - [Solution](https://github.com/TheAlgorithms/C/tree/master/leetcode): 요청이 들어온 문제나 직접 푼 문제 대한 풀이
 
