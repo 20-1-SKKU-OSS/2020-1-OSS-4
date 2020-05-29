@@ -9,7 +9,7 @@ typedef struct vector_ {
 }vector;
 
 /* Vector constructor, 벡터 생성자 */
-vector makeVector(int size, const int *element) {
+vector MakeVector(int size, const int *element) {
 	vector v;
 	v.size = size;
 	v.content = malloc(sizeof(int)*size);
@@ -24,7 +24,7 @@ vector ScalarMultiplication(int c, vector v) {
 	for (int i = 0; i < v.size; i++)
 		content[i] = v.content[i] * c;
 
-	vector result = makeVector(v.size, content);
+	vector result = MakeVector(v.size, content);
 	return result;
 }
 
@@ -36,13 +36,13 @@ vector VectorAdd(vector v1, vector v2) {
 	for (int i = 0; i < v1.size; i++)
 		content[i] = v1.content[i] + v2.content[i];
 
-	vector result = makeVector(v1.size, content);	
+	vector result = MakeVector(v1.size, content);	
 	return result;
 }
 
 
 /* innerProduct of two Vectors, 벡터의 내적 */
-int innerProduct(vector v1, vector v2) {
+int InnerProduct(vector v1, vector v2) {
 	if (v1.size != v2.size) return;
 	int result = 0;
 	for (int i = 0; i < v1.size; i++)
@@ -64,7 +64,7 @@ float VectorLength(vector v) {
 float VectorAngleCos(vector v1, vector v2) {
 	if (v1.size != v2.size) return;
 	float result = 0.0;
-	result = innerProduct(v1, v2) / (VectorLength(v1)*VectorLength(v2));
+	result = InnerProduct(v1, v2) / (VectorLength(v1)*VectorLength(v2));
 	return result;
 }
 
@@ -88,12 +88,12 @@ int main() {
 		content2[i] = i * -1;
 	}
 
-	vector v1 = makeVector(size1, content1);
-	vector v2 = makeVector(size2, content2);
-  vector v3 = ScalarMultiplication(4, v2);
-  vector v4 = VectorAdd(v1, v2);
+	vector v1 = MakeVector(size1, content1);
+	vector v2 = MakeVector(size2, content2);
+ 	vector v3 = ScalarMultiplication(4, v2);
+	vector v4 = VectorAdd(v1, v2);
 
-  printf("%d\n", innerProduct(v3, v4));
+  	printf("%d\n", InnerProduct(v3, v4));
 	printf("%.3f\n", VectorAngleCos(v1, v2));
 	printf("%.3f %.3f %.3f %.3f\n", VectorLength(v1), VectorLength(v2));
 	printf("%.3f\n", VectorProjection(v1, v2));
