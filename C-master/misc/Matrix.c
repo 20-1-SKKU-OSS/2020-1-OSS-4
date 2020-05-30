@@ -51,7 +51,7 @@ Matrix MakeMatrix(unsigned row, unsigned column, Vector *contents) {
 
 
 /* Matrix Scalar Multiplication, 행렬 스칼라 곱 */
-Matrix ScalarMultiplication(int c, Matrix m) {
+Matrix MatrixScalarMultiplication(int c, Matrix m) {
 	int row = m.row;
 	int column = m.column;
 	Vector *content = malloc(sizeof(m.content->content)*row);
@@ -138,7 +138,7 @@ int main() {
 	PrintMatrix(m2);
 
 	PrintMatrix(MatrixAdd(m1, m2));
-	PrintMatrix(ScalarMultiplication(3, m1));
+	PrintMatrix(MatrixScalarMultiplication(3, m1));
 	PrintMatrix(Transpose(m1));
 	
 	system("pause");
