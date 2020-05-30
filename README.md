@@ -45,17 +45,17 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 **1. Data Structure Project**
 
 **2. MISC Project**
- ## bit단위 연산 라이브러리 생성 및 추가 <br>
-	- Subtractable_check <br>
-	- ByteSwap <br>
-	- isGreater <br>
-	- fitsBits <br>
-	- logicalShift <br>
-	- countbit <br>
-	- rotate <br>
-	- float_absolute_value <br>
-	- int_to_float_cast <br>
-	- float_twice <br>
+ ## bit단위 연산 라이브러리 생성 및 추가<br>
+	- Subtractable_check<br>
+	- ByteSwap<br>
+	- isGreater<br>
+	- fitsBits<br>
+	- logicalShift<br>
+	- countbit<br>
+	- rotate<br>
+	- float_absolute_value<br>
+	- int_to_float_cast<br>
+	- float_twice<br>
 	
  ## Vector 구조체와 관련 연산 추가 <br>
 	- Vector 구조체 및 생성자 추가 (vector, MakeVector)<br>
