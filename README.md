@@ -46,28 +46,28 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 
 **2. MISC Project**
  ## bit단위 연산 라이브러리 생성 및 추가<br>
-	- Subtractable_check<br>
-	- ByteSwap<br>
-	- isGreater<br>
-	- fitsBits<br>
-	- logicalShift<br>
-	- countbit<br>
-	- rotate<br>
-	- float_absolute_value<br>
-	- int_to_float_cast<br>
-	- float_twice<br>
+	- Subtractable_check
+	- ByteSwap
+	- isGreater
+	- fitsBits
+	- logicalShift
+	- countbit
+	- rotate
+	- float_absolute_value
+	- int_to_float_cast
+	- float_twice
 	
  ## Vector 구조체와 관련 연산 추가 <br>
-	- Vector 구조체 및 생성자 추가 (vector, MakeVector)<br>
-	- Vector의 스칼라곱, Vector간 합 구현 (VecotrScalarMultiplication, VectorAdd)<br>
-	- Vector의 내적과 길이 구현 (InnerProduct, VectorLength)<br>
-	- 두 Vector 사이 각(cos), Vector의 사영 구현 (VectorAngleCos, VectorProjection)<br>
+	- Vector 구조체 및 생성자 추가 (vector, MakeVector)
+	- Vector의 스칼라곱, Vector간 합 구현 (VecotrScalarMultiplication, VectorAdd)
+	- Vector의 내적과 길이 구현 (InnerProduct, VectorLength)
+	- 두 Vector 사이 각(cos), Vector의 사영 구현 (VectorAngleCos, VectorProjection)
 	
  ## Matrix(행렬) 구조체와 관련 연산 추가 <br>
-	- Matrix 구조체 및 생성자 추가(Matrix, MakeMatrix) <br>
-	- Matrix의 스칼라곱, Matrix간 합 구현 (MatrixScalarMulitiplication, MatrixAdd) <br>
-	- Matrix 출력 함수 구현 (PrintMatrix) <br>
-	- Matrix의 전치(Transpose) 구현 진행중 <br>
+	- Matrix 구조체 및 생성자 추가(Matrix, MakeMatrix)
+	- Matrix의 스칼라곱, Matrix간 합 구현 (MatrixScalarMulitiplication, MatrixAdd)
+	- Matrix 출력 함수 구현 (PrintMatrix)
+	- Matrix의 전치(Transpose) 구현 진행중
 
 
 ## 기존 프로젝트 내용
