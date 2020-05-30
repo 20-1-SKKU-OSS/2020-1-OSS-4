@@ -46,16 +46,16 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 
 **2. MISC Project**
  ## bit단위 연산 라이브러리 생성 및 추가 <br>
-	- Subtractable_check: 오버플로우 없이 두 정수의 차를 구할 수 있는지 확인<br>
-	- ByteSwap: 한 정수의 n바이트의 값과 m바이트의 값을 서로 바꿈<br>
-	- isGreater: 두 정수 중 먼저 입력된 정수가 더 크면 1, 아니면 0을 반환<br>
-	- fitsBits: 입력된 수 x를 n비트로 표현할 수 있으면 1, 아니면 0을 반환<br>
-	- logicalShift: int형으로 입력받은 수 x를 n번 right shift할 때, 빈 자리를 MSB가 아닌 0으로 채워진 수를 반환<br>
-	- countbit: 입력된 수를 2진수로 표현했을 때 1의 개수를 반환<br>
-	- rotate: x를 n번 left shift한 후 범위에서 넘어간 수를 LSB에 삽입한 값을 반환<br>
-	- float_absolute_value: float 형으로 입력 받은 값의 절대값을 반환, NaN이나 infinity는 입력 받은 값 그대로 반환<br>
-	- int_to_float_cast: int형으로 입력받은 수를 float표현으로 변환해서 반환<br>
-	- float_twice: float 비트표현으로 입력 받은 수 uf를 2배해서 반환, NaN이나 infinity는 입력받은 값 그대로 반환<br>
+	- Subtractable_check <br>
+	- ByteSwap <br>
+	- isGreater <br>
+	- fitsBits <br>
+	- logicalShift <br>
+	- countbit <br>
+	- rotate <br>
+	- float_absolute_value <br>
+	- int_to_float_cast <br>
+	- float_twice <br>
 	
  ## Vector 구조체와 관련 연산 추가 <br>
 	- Vector 구조체 및 생성자 추가 (vector, MakeVector)<br>
