@@ -19,7 +19,7 @@ vector MakeVector(int size, const int *element) {
 }
 
 /* Vector Scalar Multiplication, 벡터 스칼라 곱 */
-vector ScalarMultiplication(int c, vector v) {
+vector VectorScalarMultiplication(int c, vector v) {
 	int *content = malloc(sizeof(int)*v.size);
 	for (int i = 0; i < v.size; i++)
 		content[i] = v.content[i] * c;
@@ -90,7 +90,7 @@ int main() {
 
 	vector v1 = MakeVector(size1, content1);
 	vector v2 = MakeVector(size2, content2);
- 	vector v3 = ScalarMultiplication(4, v2);
+ 	vector v3 = VectorScalarMultiplication(4, v2);
 	vector v4 = VectorAdd(v1, v2);
 
   	printf("%d\n", InnerProduct(v3, v4));
