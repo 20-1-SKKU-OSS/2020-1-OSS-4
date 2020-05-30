@@ -56,11 +56,19 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 	- float_absolute_value: float 형으로 입력 받은 값의 절대값을 반환, NaN이나 infinity는 입력 받은 값 그대로 반환<br>
 	- int_to_float_cast: int형으로 입력받은 수를 float표현으로 변환해서 반환<br>
 	- float_twice: float 비트표현으로 입력 받은 수 uf를 2배해서 반환, NaN이나 infinity는 입력받은 값 그대로 반환<br>
+	
  ## Vector 구조체와 관련 연산 추가 <br>
 	- Vector 구조체 및 생성자 추가 (vector, MakeVector)<br>
 	- Vector의 스칼라곱, Vector간 합 구현 (ScalarMultiplication, VectorAdd)<br>
 	- Vector의 내적과 길이 구현 (InnerProduct, VectorLength)<br>
 	- 두 Vector 사이 각(cos), Vector의 사영 구현 (VectorAngleCos, VectorProjection)<br>
+	
+ ## Matrix(행렬) 구조체와 관련 연산 추가 <br>
+	- Matrix 구조체 및 생성자 추가(Matrix, MakeMatrix) <br>
+	- Matrix의 스칼라곱, Matrix간 합 구현 (ScalarMulitiplication, MatrixAdd) <br>
+	- Matrix 출력 함수 구현 (PrintMatrix) <br>
+	- Matrix의 전치(Transpose) 구현 진행중 <br>
+
 
 ## 기존 프로젝트 내용
 전체 알고리즘 리스트: [DIRECTORY.md](https://github.com/20-1-SKKU-OSS-4/blob/master/C-master/DIRECTORY.md)
