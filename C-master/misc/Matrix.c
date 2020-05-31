@@ -17,7 +17,6 @@ typedef struct Matrix_ {
 	Vector *content;
 }Matrix;
 
-
 /* Vector constructor, 벡터 생성자 */
 Vector MakeVector(int size, const int *element) {
 	Vector v;
@@ -51,7 +50,7 @@ Matrix MakeMatrix(unsigned row, unsigned column, Vector *contents) {
 
 
 /* Matrix Scalar Multiplication, 행렬 스칼라 곱 */
-Matrix MatrixScalarMultiplication(int c, Matrix m) {
+Matrix ScalarMultiplication(int c, Matrix m) {
 	int row = m.row;
 	int column = m.column;
 	Vector *content = malloc(sizeof(m.content->content)*row);
@@ -91,16 +90,17 @@ Matrix MatrixAdd(Matrix m1, Matrix m2) {
 Matrix Transpose(Matrix m) {
 	int row = m.row;
 	int column = m.column;
-	Vector *content = malloc(sizeof(m.content[0])*column);
-	for (int i = 0; i < row; i++)
+	Vector tmp;
+	tmp.content = malloc(sizeof(int)*row);
+	Vector *content = malloc(sizeof(tmp)*column);
+	for (int i = 0; i < column; i++)
 		content[i].content = malloc(sizeof(int)*row);
 
 	for (int i = 0; i < row; i++) {
-		for (int j = 0; j < column; i++) {
+		for (int j = 0; j < column; j++) {
 			content[j].content[i] = m.content[i].content[j];
 		}
 	}
-
 	Matrix result = MakeMatrix(column, row, content);
 	return result;
 }
@@ -110,7 +110,7 @@ Matrix Transpose(Matrix m) {
 void PrintMatrix(Matrix m) {
 	for (int i = 0; i < m.row; i++) {
 		for (int j = 0; j < m.column; j++) {
-			printf("%d ", m.content[i].content[j]);
+			printf("%2d ", m.content[i].content[j]);
 		}
 		printf("\n");
 	}
@@ -138,7 +138,7 @@ int main() {
 	PrintMatrix(m2);
 
 	PrintMatrix(MatrixAdd(m1, m2));
-	PrintMatrix(MatrixScalarMultiplication(3, m1));
+	PrintMatrix(ScalarMultiplication(3, m1));
 	PrintMatrix(Transpose(m1));
 	
 	system("pause");
