@@ -67,7 +67,7 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 	- Matrix 구조체 및 생성자 추가(Matrix, MakeMatrix)
 	- Matrix의 스칼라곱, Matrix간 합 구현 (MatrixScalarMulitiplication, MatrixAdd)
 	- Matrix 출력 함수 구현 (PrintMatrix)
-	- Matrix의 전치(Transpose) 구현 진행중
+	- Matrix의 전치(Transpose) 구현 (Transpose)
 
 
 ## 기존 프로젝트 내용
