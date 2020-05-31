@@ -77,7 +77,7 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 - [LeetCode](https://leetcode.com/problemset/all/): LeetCode 알고리즘 문제 사이트
 - [Solution](https://github.com/TheAlgorithms/C/tree/master/leetcode): 요청이 들어온 문제나 직접 푼 문제 대한 풀이
 
-## Computer Oriented Statistical Methods (통계학적 Method 라이브러리)
+## Computer Oriented Statistical Methods (통계학 Method 라이브러리)
 	- Gauss_Elimination
 	- Lagrange_Theorem
 	- Mean
@@ -249,5 +249,6 @@ This directory contains
 >  * 알고리즘상의 에러 제거 <br>
 > 2. Issue 추가 및 관리 <br>
 > 3. ReadMe 관리 및 기여한 내용 반영<br>
+>  * MISC 프로젝트 진행 사항 및 완료 사항 정리
 
 
