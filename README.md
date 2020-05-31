@@ -15,27 +15,32 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 > 이메일: tmdgur325@gmail.com<br>
 > GitHub ID: [meltingOcean](https://github.com/meltingocean)<br>
 > 경력: 성균관대학교 소프트웨어학과 재학중
+> Data Structure Project 담당
 
 ### 팀원
 **권윤영**
 > 이메일: nicesteph@naver.com<br>
 > GitHub ID: [yoonyoungkwon](https://github.com/yoonyoungkwon)<br>
 > 경력: 성균관대학교 소프트웨어학과 재학중
+> Data Structure Project 담당
 
 **윤태웅**
 > 이메일: woongman1109@naver.com<br>
 > GitHub ID: [woongman1109](https://github.com/woongman1109)<br>
 > 경력: 성균관대학교 나노공학과 재학중 / 소프트웨어학과 복수 전공중
+> MISC Project 담당
 
 **이찬영**
 > 이메일: ckckdud123@naver.com<br>
 > GitHub ID: [ckckdud3](https://github.com/ckckdud3)<br>
 > 경력: 성균관대학교 소프트웨어학과 재학중
+> Data Structure Project 담당
 
 **최영우**
 > 이메일: cyw7515@naver.com<br>
 > GitHub ID: [Yongware](https://github.com/yongware)<br>
 > 경력: 성균관대학교 소프트웨어학과 재학중
+> MISC Project 담당
 
 ## <div id = "about_project">프로젝트 소개</div>
  * Algorithms/C 프로젝트를 선정했습니다.
