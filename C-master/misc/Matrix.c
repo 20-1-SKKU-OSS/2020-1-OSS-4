@@ -106,6 +106,23 @@ Matrix Transpose(Matrix m) {
 }
 
 
+/* isSquareMatrix, 정방행렬 여부 반환 */
+boolean isSquareMatrix(Matrix m) {
+	return m.row == m.column;
+}
+
+
+/* isSymmetricMatrix, 대칭행렬 여부 반환 */
+boolean isSymmetricMatrix(Matrix m) {
+	if (!isSquareMatrix(m)) return FALSE;
+	for (int i = 0; i < m.row; i++)
+		for (int j = 0; j < m.column; j++)
+			if (m.content[i].content[j] != m.content[j].content[i])
+				return FALSE;
+	return TRUE;
+}
+
+
 /* print Matrix, 행렬을 출력함 */
 void PrintMatrix(Matrix m) {
 	for (int i = 0; i < m.row; i++) {
