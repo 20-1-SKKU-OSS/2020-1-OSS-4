@@ -2,6 +2,13 @@
 #include<stdlib.h>
 #include<math.h>
 
+typedef enum _boolean { 
+	FALSE,
+	TRUE
+}boolean;
+
+#define FALSE 0
+#define TRUE 1
 
 //Vector, 벡터 구조체
 typedef struct Vector_ {
@@ -70,7 +77,7 @@ Matrix ScalarMultiplication(int c, Matrix m) {
 
 /* Matrix Addition, 두 행렬의 합 */
 Matrix MatrixAdd(Matrix m1, Matrix m2) {
-	if ((m1.row != m2.row) || (m1.column != m2.column)) return;
+	if ((m1.row != m2.row) || (m1.column != m2.column)) return MakeMatrix(0, 0, NULL);
 	int row = m1.row;
 	int column = m1.column;
 	Vector *content = malloc(sizeof(m1.content->content)*row);
@@ -86,7 +93,7 @@ Matrix MatrixAdd(Matrix m1, Matrix m2) {
 	return result;
 }
 
-/* Transpose of Matrix, 행렬 전치(행렬을 90도 돌림) */
+/* Transpose of Matrix, 행렬 전치(행렬을 90도 돌림), 미완성 */
 Matrix Transpose(Matrix m) {
 	int row = m.row;
 	int column = m.column;
@@ -103,6 +110,44 @@ Matrix Transpose(Matrix m) {
 	}
 	Matrix result = MakeMatrix(column, row, content);
 	return result;
+}
+
+
+
+Matrix MatrixMultiplication(Matrix m1, Matrix m2) {
+	int row = m1.row;
+	int column = m2.column;
+	if ((m1.column != m2.row) && (m1.row != m2.column)) MakeMatrix(0, 0, NULL);
+	int i = 0, j = 0;
+	Vector tmp;
+
+	//initialize, 만들 행열 초기화
+	tmp.content = malloc(sizeof(int) * column);
+	Vector *content = malloc(sizeof(tmp) * row);
+	
+	for (i = 0; i < row; i++)
+		content[i].content = malloc(sizeof(int)*row);
+
+	for (i = 0; i < row; i++)
+		for (j = 0; j < column; j++)
+			content[i].content[j] = 0;
+
+	//Matrix m = MakeMatrix(row, column, content);
+	//PrintMatrix(m);
+
+	printf("pass\n");
+
+	//곱셈 값 넣어주기
+	i = 0, j = 0;
+	while (m1.content[i].content[j]) {
+		while (m2.content[j].content[i]) {
+			content[i].content[j] += m1.content[i].content[j] * m2.content[j].content[i];
+			j++;
+		}
+		i++;
+	}
+
+	return MakeMatrix(row, column, content);
 }
 
 
@@ -125,6 +170,8 @@ boolean isSymmetricMatrix(Matrix m) {
 
 /* print Matrix, 행렬을 출력함 */
 void PrintMatrix(Matrix m) {
+	if (m.row == 0) return;
+
 	for (int i = 0; i < m.row; i++) {
 		for (int j = 0; j < m.column; j++) {
 			printf("%2d ", m.content[i].content[j]);
@@ -138,18 +185,19 @@ void PrintMatrix(Matrix m) {
 /* example of use, 용례 */
 int main() {
 	int a[3] = { 7, 0, -3 }, b[3] = { 2, 1, 4 };
-	int c[3] = { 3, -1, 2 }, d[3] = { 2, 4, 6 };
+	int c[2] = { 3, -1 }, d[2] = { 2, 4 }, e[2] = { 1, -1};
 
 	Vector v1 = MakeVector(3, a);
 	Vector v2 = MakeVector(3, b);
-	Vector v3 = MakeVector(3, c);
-	Vector v4 = MakeVector(3, d);
+	Vector v3 = MakeVector(2, c);
+	Vector v4 = MakeVector(2, d);
+	Vector v5 = MakeVector(2, e);
 
 	Vector C1[2] = { v1, v2 };
-	Vector C2[2] = { v3, v4 };
+	Vector C2[3] = { v3, v4 , v5};
 	
 	Matrix m1 = MakeMatrix(2, 3, C1);
-	Matrix m2 = MakeMatrix(2, 3, C2);
+	Matrix m2 = MakeMatrix(3, 2, C2);
 
 	PrintMatrix(m1);
 	PrintMatrix(m2);
@@ -157,6 +205,7 @@ int main() {
 	PrintMatrix(MatrixAdd(m1, m2));
 	PrintMatrix(ScalarMultiplication(3, m1));
 	PrintMatrix(Transpose(m1));
-	
+	PrintMatrix(MatrixMultiplication(m1, m2));
+
 	system("pause");
 }
