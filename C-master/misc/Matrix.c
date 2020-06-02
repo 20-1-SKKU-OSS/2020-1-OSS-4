@@ -131,20 +131,18 @@ Matrix MatrixMultiplication(Matrix m1, Matrix m2) {
 	for (i = 0; i < row; i++)
 		for (j = 0; j < column; j++)
 			content[i].content[j] = 0;
-
-	//Matrix m = MakeMatrix(row, column, content);
-	//PrintMatrix(m);
-
-	printf("pass\n");
-
+	
 	//곱셈 값 넣어주기
 	i = 0, j = 0;
-	while (m1.content[i].content[j]) {
-		while (m2.content[j].content[i]) {
-			content[i].content[j] += m1.content[i].content[j] * m2.content[j].content[i];
+	while (i < row) {
+		while (j <= column) {
+			for (int k = 0; k < m1.column; k++) {
+				content[i].content[j] += m1.content[i].content[k] * m2.content[k].content[j];
+			}
 			j++;
 		}
 		i++;
+		j = 0;
 	}
 
 	return MakeMatrix(row, column, content);
