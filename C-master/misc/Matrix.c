@@ -113,7 +113,7 @@ Matrix Transpose(Matrix m) {
 }
 
 
-
+/* Matrix Multiplication, 두 행렬 간의 곱 계산 */
 Matrix MatrixMultiplication(Matrix m1, Matrix m2) {
 	int row = m1.row;
 	int column = m2.column;
