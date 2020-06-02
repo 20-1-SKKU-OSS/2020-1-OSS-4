@@ -73,7 +73,7 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 	- Matrix의 스칼라곱, Matrix간 합 구현 (MatrixScalarMulitiplication, MatrixAdd)
 	- Matrix 출력 함수 구현 (PrintMatrix)
 	- Matrix의 전치(Transpose) 구현 (Transpose)
-	- 두 Matrix간의 곱, 역행렬 구현 진행중
+	- 두 Matrix간의 곱 구현 (MatrixMultiplication)
 	- 정방행렬(Square Matrix), 대칭행렬(Symmetric Matrix) 판별 함수 구현 (isSquareMatrix, isSymmetric Matrix)
 
 
