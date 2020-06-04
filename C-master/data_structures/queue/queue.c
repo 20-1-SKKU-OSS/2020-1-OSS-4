@@ -51,16 +51,18 @@ void Enqueue(Queue *q, Data data){
 }
 
 // Dequeue : Takes out the QNode at the front of the queue.
-void Dequeue(Queue *q){
+Data *Dequeue(Queue *q){
 
-	if(isEmpty(q))
-		printf("There's nothing to dequeue.\n");
-	else{
+	Data *tempval = NULL;
+	if(!isEmpty(q)){
+		tempval = (Data *)malloc(sizeof(Data));
 		QNode *temp = q->front->next;
+		*tempval = temp->value;
 		q->front->next = temp->next;
 		free(temp);
-		(q->size)--;	
+		(q->size)--;
 	}
+	return tempval;
 }
 
 //Copy : Returns a deep-copied queue of the given queue.
