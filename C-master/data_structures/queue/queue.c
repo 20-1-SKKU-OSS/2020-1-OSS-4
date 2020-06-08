@@ -11,6 +11,7 @@
 
 // InitQueue : Initializes Queue.
 Queue *InitQueue(Queue *q){
+
 	q = (Queue *)malloc(sizeof(Queue));
 	q->size = 0;
 
@@ -25,11 +26,13 @@ Queue *InitQueue(Queue *q){
 
 // getSize : Returns the size of a queue.
 int getSize(Queue *q){
+
 	return q->size;
 }
 
 // isEmpty : Checks whether the given queue is empty.
 int isEmpty(Queue *q){
+
 	if(getSize(q) == 0)
 		return TRUE;
 	else
@@ -54,7 +57,7 @@ void Enqueue(Queue *q, Data data){
 Data *Dequeue(Queue *q){
 
 	Data *tempval = NULL;
-	if(!isEmpty(q)){
+	if(q != NULL && !isEmpty(q)){
 		tempval = (Data *)malloc(sizeof(Data));
 		QNode *temp = q->front->next;
 		*tempval = temp->value;
@@ -68,16 +71,35 @@ Data *Dequeue(Queue *q){
 //Copy : Returns a deep-copied queue of the given queue.
 Queue *Copy(Queue *q){
 
-	Queue *copyq;
-	InitQueue(copyq);
-	if(isEmpty(q))
-		return copyq;
-	else{
-		QNode *cursor = q->front;
-		while(cursor->next != NULL){
-			cursor = cursor->next;
-			Enqueue(copyq, curcor->value);
+	Queue *copyq = NULL;
+	if(q != NULL){
+		InitQueue(copyq);
+		if(isEmpty(q))
+			return copyq;
+		else{
+			QNode *cursor = q->front;
+			while(cursor->next != NULL){
+				cursor = cursor->next;
+				Enqueue(copyq, cursor->value);
+			}
 		}
 	}
 	return copyq;
+}
+
+//Search : Returns the index of target data.
+int Search(Queue *q, Data target){
+
+	if(q != NULL){
+		QNode *cursor = q->front->next;
+		int index = 0;
+		while(cursor->next != NULL){
+			if(cursor->value == target)
+				return index;
+			cursor = cursor->next;
+			index++;
+		}
+	}
+	// If there is no such value, returns -1 for representing "not found".
+	return -1;
 }

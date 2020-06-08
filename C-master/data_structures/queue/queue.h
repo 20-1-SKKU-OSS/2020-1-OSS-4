@@ -30,6 +30,8 @@ void Enqueue(Queue *q, Data data);
 void Dequeue(Queue *q);
 
 // Copy : Returns a deep-copied queue of the given queue.
-Queue *Copy(queue *q);
+Queue *Copy(Queue *q);
 
+// Search : Returns the index of target data.
+int Search(Queue *q, Data target);
 #endif
