@@ -1,3 +1,8 @@
+/*
+ *	Author : ckckdud3
+ *	This source file implements the methods of the Queue.
+ */
+
 // Includes
 #include <stdio.h>
 #include <stdlib.h>
