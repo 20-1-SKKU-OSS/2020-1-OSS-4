@@ -1,3 +1,8 @@
+/*
+ *	Author : ckckdud3
+ *	This header file declares Deque structure and its methods.
+ */
+
 #ifndef __DEQUE_H__
 #define __DEQUE_H__
 
