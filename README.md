@@ -204,7 +204,7 @@ This directory contains
 
 
 ## <div id="#how_to">활동 방법</div>
-* TheAlgorithms에 빠져 있는 자료구조(양방향 연결 리스트, b+ 트리 등)와 알고리즘(바이토닉 정렬, bitwise 연산 등)을 구현</br>
+* TheAlgorithms에 빠져 있는 자료구조(양방향 연결 리스트, b+ 트리 등), 알고리즘(Matrix 연산, bitwise 연산 등)을 구현</br>
 * 테스트를 거쳐Pull Request를 요청하는 방식으로 프로젝트에 기여한다.</br>
 * 활동 기록을 문서화하여 정리하고, 또한 ReadMe 마크다운의 번역 등을 통해서도 프로젝트에 기여하도록 한다.</br>
 
