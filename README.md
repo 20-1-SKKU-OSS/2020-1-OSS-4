@@ -106,6 +106,8 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 ## Data Structures (자료구조)
 	- stack
 	- queue
+		- singly_linked_list based queue
+		- deque (double-ended queue)
 	- dictionary
 	- linked_list
 		- singly_link_list_deletion
@@ -133,6 +135,7 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 ## Sorting (정렬 방법)
 	- BinaryInsertionSort
 	- BubbleSort
+	- BitonicSort
 	- BucketSort
 	- BogoSort
 	- comb_sort
