@@ -7,7 +7,7 @@ int main(){
     int *num, *temp5;
     int N, index, tmp;
     
-    scanf("%d", &N);
+    scanf("%d", &N); //입력할 카드 개수
     
     arr1 = (char*)malloc(sizeof(char)*N);
     arr2 = (char*)malloc(sizeof(char)*N);
@@ -18,9 +18,9 @@ int main(){
     temp5 = (int*)malloc(sizeof(int)*N);
     num = (int*)malloc(sizeof(int)*N);
     for( int i = 0 ; i < N ; i ++ ){
-        scanf("%c", &arr1[i]);
+        scanf("%c", &arr1[i]); //카드의 suit
         getchar();
-        scanf("%c", &arr2[i]);
+        scanf("%c", &arr2[i]); //카드의 rank
         getchar();
     }
     
