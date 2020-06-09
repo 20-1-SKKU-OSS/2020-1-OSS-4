@@ -68,6 +68,10 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 	- Vector의 내적과 길이 구현 (InnerProduct, VectorLength)
 	- 두 Vector 사이 각(cos), Vector의 사영 구현 (VectorAngleCos, VectorProjection)
 	
+## MIPS Architecture Operation Simulator 기능 추가
+	- cmd를 이용한 shell로 명령어를 실행해 MIPS Architecture 기반 instruction을 시뮬레이션할 수 있음(.bin, .dat 등의 바이너리 파일을 이용할 수 있음)
+	- read <filename>: 지정된 파일을 읽어 instruction을 출력함
+	
  ## Matrix(행렬) 구조체와 관련 연산 추가 <br>
 	- Matrix 구조체 및 생성자 추가(Matrix, MakeMatrix)
 	- Matrix의 스칼라곱, Matrix간 합 구현 (MatrixScalarMulitiplication, MatrixAdd)
