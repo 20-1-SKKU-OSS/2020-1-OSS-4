@@ -80,7 +80,7 @@ void run_inst_imm_andi(Register* r, Register* pc, Mem_4* m, int i);
 void run_inst_imm_ori(Register* r, Register* pc, Mem_4* m, int i);
 void run_inst_imm_xori(Register* r, Register* pc, Mem_4* m, int i);
 void run_inst_1imm_lui(Register* r, Register* pc, Mem_4* m, int i);
- 
+
 long charbin2long(unsigned char* c);
 int charbin2int(unsigned char* c);
 char* mygets(char* s);
@@ -117,8 +117,10 @@ int main() {
 					i = 0;
 					unsigned char buffer[4];
 					FILE* len = fopen(object, "rb");
-					if (!len)
+					if (!len) {
+						printf("[ERROR] No such file exists.\n");
 						continue;
+					}
 					while (fread(buffer, sizeof(unsigned char), 4, len) != 0)
 						list_len++;
 					fclose(len);
@@ -145,6 +147,10 @@ int main() {
 					list_len = 0;
 					unsigned char buffer[4];
 					FILE* len = fopen(object, "rb");
+					if (!len) {
+						printf("[ERROR] No such file exists.\n");
+						continue;
+					}
 					if (!len)
 						continue;
 					while (fread(buffer, sizeof(unsigned char), 4, len) != 0)
@@ -160,9 +166,9 @@ int main() {
 						inst_list[i].bp = parse_inst_bin(inst_list[i]);
 						memory[i].bc.bp = parse_inst_bin(inst_list[i]);
 					}
-					for (i = 0; i < list_len; i++) 
+					for (i = 0; i < list_len; i++)
 						memory[i].bc = inst_list[i];
-					
+
 					fclose(f);
 					continue;
 				}
@@ -172,30 +178,48 @@ int main() {
 				}
 			}
 			else if (strcmp(object, "run") == 0) {
-				if (object = strtok(NULL, " ")) {
-					int state = 0;
-					i = 0;
-					initReg(reg, &PC);
-					while (1) {
-						if (i + 1 > atoi(object))
-							break;
-						state = run_inst_master(reg, &PC, memory, i++);
-						
-						if (state == -1) {
-							printf("unknown instruction\n");
-							i--;
-							break;
-						}
+				object = strtok(NULL, " ");
+				int EOI = list_len;
+				if (object)
+					EOI = atoi(object);
+				int state = 0;
+				i = 0;
+				initReg(reg, &PC);
+				while (1) {
+					if (i + 1 > EOI)
+						break;
+					state = run_inst_master(reg, &PC, memory, i++);
+
+					if (state == -1) {
+						printf("unknown instruction\n");
+						i--;
+						break;
 					}
-					printf("Executed %d instructions\n", i);
 				}
+				printf("Executed %d instructions\n", i);
 			}
 			else if (strcmp(object, "registers") == 0) {
 				for (i = 0; i < 32; i++)
 					printf("$%d: 0x%08x\n", i, reg[i].data);
 				printf("PC: 0x%08x\n", PC.data);
 			}
-			else continue;
+			else {
+				if (strcmp(object, "loaddata") == 0) {
+					printf("\n| !  !  ! | loaddata command is not available.\n");
+					printf("| Notice! | Available from: version 3\n");
+					printf("| !  !  ! | To check current version, type \'version\'.\n\n");
+					continue;
+				}
+				else if (strcmp(object, "version") == 0) {
+					printf("\n|  MIPS Instruction Set Architecture Simulator        |\n");
+					printf("|   current version: 2(STABLE)                        |\n");
+					printf("|   for devleoper version, follow this link:          |\n");
+					printf("|   -> https://github.com/20-1-SKKU-OSS/2020-1-OSS-4  |\n\n");
+					continue;
+				}
+				printf("[ERROR] Unknown command...\n");
+				continue;
+			}
 		}
 	}
 	return 0;
