@@ -165,3 +165,18 @@ unsigned float_twice(unsigned uf) {
 	else return uf; //special
 	return sign + (e << 23) + frac;
 }
+
+
+/*Example of using, 사용 예시*/
+int main(){
+	printf("Is subtractable 0x80000000, 0x70000000?: %d\n\n", subtractable_check(0x80000000, 0x70000000));
+	printf("Byte swap 0x12345678 for first byte and third byte: %x\n\n", byteSwap(0x12345678, 1, 3));
+	printf("Logical right shift 0x87654321 for 4bits: %x\n\n", logicalShift(0x87654321, 4));
+	printf("Count the number of Bits at 0x11111111: %d\n\n", countbit(0x11111111));
+	printf("Is 4 is Greater than 5?: %d(one for Yes, zero for No)\n\n", isGreater(4, 5));
+	printf("Is 5 can be representated using only 3bits?: %d(one for Yes, zero for No)\n\n", fitsbits(5, 3));
+	printf("Rotate left Number 0x87654321 for 4bits: %x\n\n", rotate(0x87654321, 4));
+	printf("FP represenation for 0x10451045: %x\n\n", int_to_float_cast(0x10451045));
+	printf("Twice FP value of 0x00120012: %x\n\n", float_twice(0x00120012));
+	system("pause");
+}
