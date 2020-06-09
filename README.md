@@ -74,7 +74,7 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 	- loadinst <filename>: 지정된 파일을 읽어 binary code를 instruction으로 변환해 가상 instruction data memory 영역에 저장함
 	- run [number]: 가상 instruction memory에 저장된 instruction을 실행함
 		- [number]: 지정한 숫자만큼의 명령어를 실행함(지정하지 않는 경우 instruction 끝까지 실행함)
-	- registers: 현재 register 값들을 출력함
+	- registers: 현재 register 값들을 출력함($0 ~ #31)
 	
  ## Matrix(행렬) 구조체와 관련 연산 추가 <br>
 	- Matrix 구조체 및 생성자 추가(Matrix, MakeMatrix)
