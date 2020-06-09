@@ -50,6 +50,14 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 **1. Data Structure Project**
  ## b+tree 추가<br>
         - NUM_KEYS 상수를 설정하여서 원하는 노드크기의 B+tree를 생성하여 insert 후 만들어진 b+tree를 c로 구현하는것 완료.
+ ## doubly linked list 코드 추가<br>
+ 	- 기존 프로젝트에 singly linked list 코드만 있는 것을 고려해 흔히 쓰이는 data structure 중 doubly linked list 코드를 한글 주석과 함께 추가.
+ ## 한글 주석 추가<br>
+ 	- 기존 프로젝트에 있던 코드 stack.c에 한글 주석 추가
+	- 기존 프로젝트에 있던 코드 queue.c에 한글 주석 추가
+ ## sorting 코드 추가<br>
+ 	- Card_Sort 코드 추가 (원하는 만큼의 카드 개수를 입력 받은 뒤 그 개수만큼 카드를 입력 받아 카드 규칙대로 배열)
+	- Word Sort 코드 추가 (원하는 만큼의 단어 개수를 입력 받은 뒤 그 개수만큼 단어를 입력 받아 같은 단어가 여러번 입력 될 경우 입력된 횟수가 많은 순으로 단어를 배열 후 알파벳 순으로 배열)
 **2. MISC Project**
  ## bit단위 연산 라이브러리 생성 및 추가<br>
 	- Subtractable_check
