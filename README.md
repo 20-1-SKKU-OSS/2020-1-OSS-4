@@ -138,6 +138,7 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 	- binary_trees
 		- create_node
 		- recursive_traversals
+		- Red_Black_Tree (자가 균형 이진 트리)
 	- trie
 		- trie
 	- heap
