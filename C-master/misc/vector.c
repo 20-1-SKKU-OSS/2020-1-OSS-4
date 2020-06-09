@@ -76,6 +76,13 @@ float VectorProjection(vector v1, vector v2) {
 	return result;
 }
 
+
+/*Print Vector, 입력 받은 벡터를 출력하는 함수*/
+void PrintVector(vector v){
+	for(int i = 0; i < v.size; i++)
+		printf("%d ", v.content[i]);
+}
+
 //for example, 사용 예시 main
 int main() {
 	
@@ -95,7 +102,7 @@ int main() {
 
   	printf("%d\n", InnerProduct(v3, v4));
 	printf("%.3f\n", VectorAngleCos(v1, v2));
-	printf("%.3f %.3f %.3f %.3f\n", VectorLength(v1), VectorLength(v2));
+	printf("%.3f %.3f\n", VectorLength(v1), VectorLength(v2));
 	printf("%.3f\n", VectorProjection(v1, v2));
 
 	system("pause");
