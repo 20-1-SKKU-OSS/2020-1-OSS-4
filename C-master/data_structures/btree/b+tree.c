@@ -1,5 +1,7 @@
 #include<stdio.h>
+#include<stdlib.h>
 #define NUM_KEYS 10
+
 
 enum NodeType {
 	ROOT,
@@ -9,16 +11,12 @@ enum NodeType {
 
 typedef struct _BTreeNode{
 
-	NodeType type;
+	enum NodeType type;
     int Tindex;
     long long keys[NUM_KEYS];
-	BTreeNode* child[NUM_KEYS+1];
+	struct _BTreeNode* child[NUM_KEYS+1];
 
 } BTreeNode;
-
-
-void insertKey(BTreeNode*, int, long long);
-void deleteKey(BTreeNode*, int);
 
 
 typedef struct _BStack{
@@ -30,36 +28,50 @@ typedef struct _BStack{
 
 
 typedef struct _BTree{
-    BTreeNode* root = NULL;
+    BTreeNode* root;
     int only_root_flag;
     int count;
 
 } BTree;
 
+
+BTreeNode* findValue_ins(BTree* btree, BStack* search_stack, long long value);
+void push(BStack* stackb, BTreeNode* ptr);
+BTreeNode* pop(BStack* stackb);
+int pop_c(BStack* stackb);
+void insertKey(BTreeNode* node, int index, long long value);
+void deleteKey(BTreeNode* node, int index);
+void insert(BTree* btree, long long value);
+void insert_in_leaf(BTree* btree, BTreeNode* ins_Node, long long value);
+void insert_in_parent(BTree* btree, BTreeNode* ins_Node, BStack* search_Stack, long long value, BTreeNode* made_Node);
+void trip(BTree* btree);
+void inorder(BTree* btree, BTreeNode* cur, int height);
+
+
 void push(BStack* stackb, BTreeNode* ptr){
     stackb->top++;
-    stackb->bstack[top] = ptr;
+    stackb->bstack[stackb->top] = ptr;
 
 }
 BTreeNode* pop(BStack* stackb){
     stackb->top--;
-    return stackb->bstack[top+1]; 
+    return stackb->bstack[stackb->top+1]; 
 }
 void push_c(BStack* stackb, int c_index){
     stackb->top_c++;
-    stackb->bstack_c[top_c] = c_index;
+    stackb->bstack_c[stackb->top_c] = c_index;
 
 }
 int pop_c(BStack* stackb){
-    top_c--;
-    return bstack_c[top_c+1]; 
+    stackb->top_c--;
+    return stackb->bstack_c[stackb->top_c+1]; 
 }
 void insertKey(BTreeNode* node, int index, long long value){
     if(index == -1){
         for(int i=node->Tindex;i>0;i--){
             node->keys[i] = node->keys[i-1];
         }
-        for(int i=noed->Tindex;i>=0;i--){
+        for(int i=node->Tindex;i>=0;i--){
             node->child[i+1] = node->child[i];
         }
         node->keys[0] = value;
@@ -88,7 +100,7 @@ void deleteKey(BTreeNode* node, int index){
     }
 
 
-    if(index == Tindex - 1){
+    if(index == node->Tindex - 1){
         node->child[node->Tindex] = NULL;
         node->Tindex--;
         return;
@@ -106,7 +118,6 @@ void deleteKey(BTreeNode* node, int index){
 
 void insert(BTree* btree, long long value){
 
-
     BTreeNode* ins_Node;
     BTreeNode* new_Node;
     long long temp_keys[NUM_KEYS + 1];
@@ -122,21 +133,22 @@ void insert(BTree* btree, long long value){
         new_Node = (BTreeNode*)malloc(sizeof(BTreeNode));
         new_Node->Tindex = 0;
         new_Node->type = ROOT;
-        insert_in_leaf(new_Node, value);
+        insert_in_leaf(btree, new_Node, value);
         btree->root = new_Node;
-        only_root_flag = 1;
-        count++;
+        btree->only_root_flag = 1;
+        btree->count++;
         return;
     }
 
-    ins_Node = findValue_ins(btree, value);
+    ins_Node = findValue_ins(btree, search_Stack, value);
 
-    if(ins_Node_f->Tindex < NUM_KEYS){
+    if(ins_Node->Tindex < NUM_KEYS){
         insert_in_leaf(btree, ins_Node, value);
         return;
     }
 
     new_Node = (BTreeNode*)malloc(sizeof(BTreeNode));
+    new_Node->type = LEAF;
     new_Node->Tindex = 0;
 
     for(int i=0;i<NUM_KEYS;i++){
@@ -175,31 +187,36 @@ void insert(BTree* btree, long long value){
 
 }
 
-void insert_in_leaf(BTree* btree, BTreeNode* ins_Node, long long value){;
+void insert_in_leaf(BTree* btree, BTreeNode* ins_Node, long long value){
     for(int i=0;i<ins_Node->Tindex;i++){
-        if(value < ins_Node->key[i]{
+        if(value < ins_Node->keys[i]){
             insertKey(ins_Node, i, value);
             return;
         }
     }
-    insertKey(ins_Node, ins_Node_f->Tindex, value);
+    insertKey(ins_Node, ins_Node->Tindex, value);
     
 }
 
-void insert_in_parent(BTree* btree, BTreeNode* ins_Node, BStack search_Stack,long long value, BTreeNode* made_Node){
+void insert_in_parent(BTree* btree, BTreeNode* ins_Node, BStack* search_Stack, long long value, BTreeNode* made_Node){
     BTreeNode* new_Node;
     BTreeNode* par_Node;
+    long long temp_keys[NUM_KEYS + 1];
+	BTreeNode* temp_child[NUM_KEYS + 2];
     int par_c;
     long long new_val;
     int flagy;
     if(ins_Node->type == ROOT){
         new_Node = (BTreeNode*)malloc(sizeof(BTreeNode));
+        new_Node->type = ROOT;
+        new_Node->Tindex = 0;
+
         insertKey(new_Node, 0, value);
-        new_Node_i->child[0] = ins_Node;
-        new_Node_i->child[1] =  made_Node;
-        new_Node_i->type = ROOT;
+        new_Node->child[0] = ins_Node;
+        new_Node->child[1] = made_Node;
+        
         if(made_Node->type == LEAF){
-            ins_Node->type = LEAF);
+            ins_Node->type = LEAF;
         }
         else{
             ins_Node->type = INTERNAL;
@@ -249,6 +266,7 @@ void insert_in_parent(BTree* btree, BTreeNode* ins_Node, BStack search_Stack,lon
 
         new_Node = (BTreeNode*)malloc(sizeof(BTreeNode));
         new_Node->type = INTERNAL;
+        new_Node->Tindex = 0;
 
 
 
@@ -270,10 +288,10 @@ void insert_in_parent(BTree* btree, BTreeNode* ins_Node, BStack search_Stack,lon
 
         }
         for(int i=(NUM_KEYS/2) + (NUM_KEYS%2) + 2;i<=NUM_KEYS+1;i++){
-            new_Node->child[i - ((NUM_KEYS/2) + (NUM_KEYS%2) + 2] = temp_child[i];
+            new_Node->child[i - ((NUM_KEYS/2) + (NUM_KEYS%2) + 2)] = temp_child[i];
 
         }
-        insert_in_parent(par_Node, new_val, new_Node);
+        insert_in_parent(btree, par_Node, search_Stack, new_val, new_Node);
 
     }
 
@@ -283,7 +301,7 @@ void insert_in_parent(BTree* btree, BTreeNode* ins_Node, BStack search_Stack,lon
 }
 
 BTreeNode* findValue_ins(BTree* btree, BStack* search_stack, long long value){
-    BTreeNode* cur_Node = root;
+    BTreeNode* cur_Node = btree->root;
     int flagy;
     if(btree->only_root_flag == 1){
         return cur_Node;
@@ -307,9 +325,75 @@ BTreeNode* findValue_ins(BTree* btree, BStack* search_stack, long long value){
 
             push(search_stack, cur_Node);
             push_c(search_stack, cur_Node->Tindex);
-            cur_Node = cur_Node->child(search_stack, cur_Node->Tindex);
+            cur_Node = cur_Node->child[search_stack, cur_Node->Tindex];
         }
 
 
     }
+}
+
+
+void trip(BTree* btree){
+
+    int height = 120;
+    BTreeNode* cur;
+    inorder(btree, btree->root, height);
+
+}
+void inorder(BTree* btree, BTreeNode* cur, int height){
+    if(cur == NULL) return;
+    if(cur->type == ROOT && btree->only_root_flag == 1){
+         for(int j=0;j<cur->Tindex;j++){
+            for(int i=0;i<height;i++) printf(" ");
+            printf("%lld\n", cur->keys[j]);
+        
+        } 
+    }
+    else if(cur->type == INTERNAL || cur->type == ROOT){
+        int newh = height - 5;
+        for(int j=0;j<cur->Tindex;j++){
+
+            inorder(btree, cur->child[j], newh);
+
+            for(int i=0;i<height;i++) printf(" ");
+
+            printf("%lld\n", cur->keys[j]);
+        
+        }
+
+        inorder(btree, cur->child[cur->Tindex], newh);
+    }
+
+    else if(cur->type == LEAF){
+        for(int i=0;i<height-50;i++){
+            printf(" ");
+        }
+        for(int i=0;i<cur->Tindex;i++){
+            printf("%lld", cur->keys[i]);
+            printf(" ");
+        }
+        printf("\n");
+        return;
+    }
+
+
+
+}
+
+int main(){
+    
+
+    BTree* btree = (BTree*)malloc(sizeof(BTree));
+    btree->count = 0;
+    btree->root = NULL;
+    btree->only_root_flag = -1;
+    for(int i=0;i<20000;i++){
+        insert(btree, i);
+
+    }
+
+    
+    trip(btree);
+
+
 }
