@@ -48,7 +48,8 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 
 ## 프로젝트별 진행 사항
 **1. Data Structure Project**
-
+ ## b+tree 추가<br>
+        - NUM_KEYS 상수를 설정하여서 원하는 노드크기의 B+tree를 생성하여 insert 후 만들어진 b+tree를 c로 구현하는것 완료.
 **2. MISC Project**
  ## bit단위 연산 라이브러리 생성 및 추가<br>
 	- Subtractable_check
