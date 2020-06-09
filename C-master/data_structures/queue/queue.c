@@ -16,6 +16,7 @@
 // Implementing Methods
 
 // InitQueue : Initializes Queue. // 큐 초기화
+
 Queue *InitQueue(Queue *q){
 
 	q = (Queue *)malloc(sizeof(Queue));
