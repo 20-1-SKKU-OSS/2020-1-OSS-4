@@ -82,6 +82,14 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 	- Vector의 내적과 길이 구현 (InnerProduct, VectorLength)
 	- 두 Vector 사이 각(cos), Vector의 사영 구현 (VectorAngleCos, VectorProjection)
 	
+ ## Matrix(행렬) 구조체와 관련 연산 추가 <br>
+	- Matrix 구조체 및 생성자 추가(Matrix, MakeMatrix)
+	- Matrix의 스칼라곱, Matrix간 합 구현 (MatrixScalarMulitiplication, MatrixAdd)
+	- Matrix 출력 함수 구현 (PrintMatrix)
+	- Matrix의 전치(Transpose) 구현 (Transpose)
+	- 두 Matrix간의 곱 구현 (MatrixMultiplication)
+	- 정방행렬(Square Matrix), 대칭행렬(Symmetric Matrix) 판별 함수 구현 (isSquareMatrix, isSymmetric Matrix)
+	
 ## MIPS Architecture Operation Simulator 기능 추가 <br>
 	- cmd를 이용한 shell로 명령어를 실행해 MIPS Architecture 기반 instruction을 시뮬레이션할 수 있음(.bin, .dat 등의 바이너리 파일을 이용할 수 있음)
 	- read <filename>: 지정된 파일을 읽어 instruction의 형태로 출력함
@@ -90,14 +98,7 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 	- [WIP V3] run [number]: 가상 instruction memory에 저장된 instruction을 실행하여 가상 register에 반영
 		- [number]: 지정한 숫자만큼의 명령어를 실행함(지정하지 않는 경우 instruction 끝까지 실행함)
 	- registers: 현재 register 값들을 출력함($0 ~ #31, PC, HI LO)
-	
- ## Matrix(행렬) 구조체와 관련 연산 추가 <br>
-	- Matrix 구조체 및 생성자 추가(Matrix, MakeMatrix)
-	- Matrix의 스칼라곱, Matrix간 합 구현 (MatrixScalarMulitiplication, MatrixAdd)
-	- Matrix 출력 함수 구현 (PrintMatrix)
-	- Matrix의 전치(Transpose) 구현 (Transpose)
-	- 두 Matrix간의 곱 구현 (MatrixMultiplication)
-	- 정방행렬(Square Matrix), 대칭행렬(Symmetric Matrix) 판별 함수 구현 (isSquareMatrix, isSymmetric Matrix)
+
 
 
 ## 기존 프로젝트 내용
