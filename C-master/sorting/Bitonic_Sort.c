@@ -1,6 +1,8 @@
 /*
  *	Author : ckckdud3
  *	This source file implements Bitonic Sort.
+ *      바이토닉 정렬 : 바이토닉 수열(증가->감소 또는 (감소->증가)를 재귀적으로 만들어
+ *                     만들어진 바이토닉 수열을 재귀적으로 Merge하는 정렬 알고리즘
  */
 
 // Includes
@@ -37,6 +39,7 @@ int main(){
 	}
 }
 
+// Swap : Swap two elements respect to direction  // 두 원소를 증가 감소 방향에 따라 교환 연산
 void Swap(int *arr, int i, int j, int direction){
 	int temp;
 	if(direction == (*(arr+i) > *(arr+j))){
@@ -47,7 +50,7 @@ void Swap(int *arr, int i, int j, int direction){
 }
 
 
-void BitonicMerge(int *arr, int base, int size, int direction){
+void BitonicMerge(int *arr, int base, int size, int direction){ // 두 바이토닉 수열 병합
 	int mid;
 	if(size > 1){
 		mid = c/2;
@@ -59,7 +62,7 @@ void BitonicMerge(int *arr, int base, int size, int direction){
 	}
 }
 
-void BitonicRecursive(int *arr, int base, int size, int direction){
+void BitonicRecursive(int *arr, int base, int size, int direction){ // 바이토닉 수열 재귀 & 병합
 	int mid;
 	if(size > 1){
 		mid = size/2;
@@ -68,6 +71,6 @@ void BitonicRecursive(int *arr, int base, int size, int direction){
 		BitonicMerge(arr,base,size,direction);
 }
 
-void BitonicSort(int *arr, int size){
+void BitonicSort(int *arr, int size){ // 바이토닉 정렬 호출
 	BitonicRecursive(0,size,1);
 }

@@ -1,6 +1,10 @@
 /*
  *	Author : ckckdud3
  *	This source file implements the methods of the Deque.
+ *      Deque : Double-ended Queue
+ *      It can enqueue/dequeue at both front and rear.
+ *      데크 : Double-ended Queue
+ *      front와 rear 양 쪽에서 데이터를 Enqueue 또는 Dequeue할 수 있다.
  */
 
 // Includes
@@ -14,12 +18,12 @@
 
 // Implementing Methods
 
-// InitQueue : Initializes deque.
+// InitQueue : Initializes deque. // 데크 초기화
 Queue *InitDeque(Deque *q){
 	q = (Deque *)malloc(sizeof(Deque));
 	q->size = 0;
 
-	// Allocating memory for dummy nodes
+	// Allocating memory for dummy nodes // 양 쪽 더미노드 생성
 	q->front = (DQNode *)malloc(sizeof(DQNode));
 	q->rear = (DQNode *)malloc(sizeof(DQNode));
 
@@ -32,12 +36,12 @@ Queue *InitDeque(Deque *q){
 	return q;
 }
 
-// getSize : Returns the size of the given deque.
+// getSize : Returns the size of the given deque. // 데크 사이즈 반환
 int getSize(Deque *q){
 	return q->size;
 }
 
-// isEmpty : Checks whether the given deque is empty.
+// isEmpty : Checks whether the given deque is empty. // 데크가 비었는지 확인
 int isEmpty(Deque *q){
 	if(getSize(q) == 0)
 		return TRUE;
@@ -45,7 +49,7 @@ int isEmpty(Deque *q){
 		return FALSE;
 }
 
-// EnqueueFront : Puts the new DQNode at the front of the deque.
+// EnqueueFront : Puts the new DQNode at the front of the deque. // front에 Enqueue
 void EnqueueFront(Deque *q, Data data){
 
 	DQNode *newnode = (DQNode *)malloc(sizeof(DQNode));
@@ -58,7 +62,7 @@ void EnqueueFront(Deque *q, Data data){
 	}
 }
 
-// DequeueFront : Takes out the DQNode at the front of the deque.
+// DequeueFront : Takes out the DQNode at the front of the deque. // front에서 Dequeue
 Data *DequeueFront(Deque *q){
 
 	Data *tempval = NULL;
@@ -74,7 +78,7 @@ Data *DequeueFront(Deque *q){
 	return tempval;	
 }
 
-// EnqueueRear : Puts the new DQNode at the rear of the deque.
+// EnqueueRear : Puts the new DQNode at the rear of the deque. // rear에 Enqueue
 void EnqueueRear(Deque *q, Data data){
 
 	DQNode *newnode = (DQNode *)malloc(sizeof(DQNode));
@@ -87,7 +91,7 @@ void EnqueueRear(Deque *q, Data data){
 	}
 }
 
-// DequeueRear : Takes out the DQNode at the rear of the deque.
+// DequeueRear : Takes out the DQNode at the rear of the deque. // rear에서 Dequeue
 Data DequeueRear(Deque *q){
 
 	Data tempval = NULL;
@@ -103,7 +107,7 @@ Data DequeueRear(Deque *q){
 	return tempval;
 }
 
-// Copy : Returns a deep-copied queue of the given queue.
+// Copy : Returns a deep-copied queue of the given queue. // q를 딥카피하여 반환
 Deque *Copy(Deque *q){
 
 	Deque *copyq = NULL;
@@ -122,7 +126,7 @@ Deque *Copy(Deque *q){
 	return copyq;
 }
 
-// Search : Returns the index of target data.
+// Search : Returns the index of target data. // 데이터 탐색
 int Search(Deque *q, Data target){
 	
 	if(q != NULL){
