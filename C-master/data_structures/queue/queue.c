@@ -14,7 +14,7 @@
 
 // Implementing Methods
 
-// InitQueue : Initializes Queue.
+// InitQueue : Initializes Queue. //큐 선언
 Queue *InitQueue(Queue *q){
 
 	q = (Queue *)malloc(sizeof(Queue));
@@ -29,13 +29,13 @@ Queue *InitQueue(Queue *q){
 	return q;
 }
 
-// getSize : Returns the size of a queue.
+// getSize : Returns the size of a queue. //큐의 크기를 반환
 int getSize(Queue *q){
 
 	return q->size;
 }
 
-// isEmpty : Checks whether the given queue is empty.
+// isEmpty : Checks whether the given queue is empty. //큐가 비어있는지 확인
 int isEmpty(Queue *q){
 
 	if(getSize(q) == 0)
@@ -44,7 +44,7 @@ int isEmpty(Queue *q){
 		return FALSE;
 }
 
-// Enqueue : Puts the new QNode at the rear of the queue.
+// Enqueue : Puts the new QNode at the rear of the queue. //큐의 뒤쪽에 새로운 노드 생성
 void Enqueue(Queue *q, Data data){
 
 	QNode *newnode = (Qnode *)malloc(sizeof(QNode));
@@ -59,7 +59,7 @@ void Enqueue(Queue *q, Data data){
 }
 
 // Dequeue : Takes out the QNode at the front of the queue.
-Data *Dequeue(Queue *q){
+Data *Dequeue(Queue *q){ //큐의 앞에서 노드를 뺌
 
 	Data *tempval = NULL;
 	if(q != NULL && !isEmpty(q)){
@@ -73,7 +73,7 @@ Data *Dequeue(Queue *q){
 	return tempval;
 }
 
-//Copy : Returns a deep-copied queue of the given queue.
+//Copy : Returns a deep-copied queue of the given queue. //
 Queue *Copy(Queue *q){
 
 	Queue *copyq = NULL;
