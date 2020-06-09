@@ -75,7 +75,7 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 	- float_twice
 	
  ## Vector 구조체와 관련 연산 추가 <br>
-	- Vector 구조체 및 생성자 추가 (vector, MakeVector)
+	- Vector 구조체 및 생성자, 출력함수 추가 (vector, MakeVector, PrintVector)
 	- Vector의 스칼라곱, Vector간 합 구현 (VecotrScalarMultiplication, VectorAdd)
 	- Vector의 내적과 길이 구현 (InnerProduct, VectorLength)
 	- 두 Vector 사이 각(cos), Vector의 사영 구현 (VectorAngleCos, VectorProjection)
