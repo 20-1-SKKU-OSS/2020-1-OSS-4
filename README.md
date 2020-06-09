@@ -268,10 +268,12 @@ This directory contains
 
 **이찬영**
 > 1. Data Structure 프로젝트<br>
->  * 바이토닝 정렬 등 Data Structur 내의 Sorting 라이브러리 구현<br>
+>  * 바이토닉 정렬 등 Data Structure 내의 Sorting 라이브러리 구현<br>
 >  * Queue 등 자주 쓰이는 대중적인 Data Structure 구현<br>
+>  * Exponential_Search 등 탐색 알고리즘 구현<br>
 > 2. Wiki에 기여한 내용들 반영<br>
 > 3. Issue 파악 및 관리<br>
+> 4. ReadME 관리 및 기여한 내용 반영<br>
 
 
 **최영우**
