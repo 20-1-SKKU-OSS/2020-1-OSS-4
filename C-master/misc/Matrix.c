@@ -199,10 +199,14 @@ int main() {
 
 	PrintMatrix(m1);
 	PrintMatrix(m2);
-
+	
+	printf("Print Matrix m1, m2\n");
 	PrintMatrix(MatrixAdd(m1, m2));
+	printf("Scalar Multiplication for Matrix m1 to 3\n");
 	PrintMatrix(ScalarMultiplication(3, m1));
+	printf("Print the Transpose of Matrix m1\n");
 	PrintMatrix(Transpose(m1));
+	printf("Print the result of m1 * m2\n");
 	PrintMatrix(MatrixMultiplication(m1, m2));
 
 	system("pause");
