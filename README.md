@@ -69,6 +69,10 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 
  ## doubly linked list 코드 추가<br>
  	- 기존 프로젝트에 singly linked list 코드만 있는 것을 고려해 흔히 쓰이는 data structure 중 doubly linked list 코드를 한글 주석과 함께 추가.
+ ## Singly listed list based Queue 코드 추가<br>
+ 	- 기존 Queue 코드가 부실하여 자료형의 일반화와 추가적인 메소드를 구현한 Queue 코드 추가.
+ ## Deque (Double-Ended Queue) 코드 추가<br>
+ 	- 데크(양방향 큐)가 구현되어 있지 않아 새로운 코드 추가.
  ## 한글 주석 추가<br>
  	- 기존 프로젝트에 있던 코드 stack.c에 한글 주석 추가
 	- 기존 프로젝트에 있던 코드 queue.c에 한글 주석 추가
