@@ -76,6 +76,7 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
  ## 한글 주석 추가<br>
  	- 기존 프로젝트에 있던 코드 stack.c에 한글 주석 추가
 	- 기존 프로젝트에 있던 코드 queue.c에 한글 주석 추가
+	- 기여한 코드에 한글 주석 삽입
  ## sorting 코드 추가<br>
  	- Card_Sort 코드 추가 
 	(카드 개수와 그 개수만큼 카드를 입력 받아 카드 규칙대로 배열)
@@ -153,8 +154,6 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 ## Data Structures (자료구조)
 	- stack
 	- queue
-		- singly_linked_list based queue
-		- deque (double-ended queue)
 	- dictionary
 	- linked_list
 		- singly_link_list_deletion
@@ -183,7 +182,6 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 ## Sorting (정렬 방법)
 	- BinaryInsertionSort
 	- BubbleSort
-	- BitonicSort
 	- BucketSort
 	- BogoSort
 	- comb_sort
