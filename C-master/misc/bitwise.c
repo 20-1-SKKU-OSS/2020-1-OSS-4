@@ -38,7 +38,6 @@ int isGreater(int x, int y) {
 	int y_sign = (y >> 31) & 0x1;
 	int sign_differ = x_sign ^ y_sign;
 	int sub_sign = ((y + ~x + 1) >> 31) & 0x1;
-	printf("sign %d %d\n", sign_differ, sub_sign);
 	return ((!x_sign) & sign_differ) | (((~sign_differ & 0x1) & sub_sign));
 }
 
@@ -62,7 +61,6 @@ int logicalShift(int x, int n) {
 	int bit = 32 + ~n + 1;
 	int full = (0xff << 24) + (0xff << 16) + (0xff << 8) + 0xff;
 	int mask = ~(full << bit + ~1 +1 << 1);
-	printf("%d %x %x\n", bit, full, full << bit-1 << 1);
 	return (x >> n) & mask;
 }
 
@@ -99,9 +97,7 @@ int rotate(int x, int n) {
 
 unsigned float_absolute_value(unsigned uf) {
 	unsigned uFP = uf & 0x7fffffff;
-	printf("%d %d\n", uFP, uFP + 0xff900000);
 	if (!(uFP - 0x7f900000 >> 31)) {
-		printf("passed\n");
 		return uf;
 	}
 	else return uFP;
@@ -129,7 +125,6 @@ unsigned int_to_float_cast(int x) {
 			else k--;
 		}
 		e = (k + 127);
-		printf("%d %x\n", k, e);
 		e = e << 23;
 		int frac, mask = 0, count = k-1;
 		while (count >= 0) {
