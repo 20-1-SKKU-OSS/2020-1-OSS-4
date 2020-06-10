@@ -90,6 +90,7 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 	- Matrix의 전치(Transpose) 구현 (Transpose)
 	- 두 Matrix간의 곱 구현 (MatrixMultiplication)
 	- 정방행렬(Square Matrix), 대칭행렬(Symmetric Matrix) 판별 함수 구현 (isSquareMatrix, isSymmetric Matrix)
+	- Matrix의 역행렬 구현 진행중 (InverseMatrix)
 	
 ## MIPS Architecture Operation Simulator 기능 추가 <br>
 	- cmd를 이용한 shell로 명령어를 실행해 MIPS Architecture 기반 instruction을 시뮬레이션할 수 있음(.bin, .dat 등의 바이너리 파일을 이용할 수 있음)
