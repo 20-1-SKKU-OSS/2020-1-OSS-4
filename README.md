@@ -49,23 +49,23 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 ## 프로젝트별 진행 사항
 **1. Data Structure Project**
  ## b+tree 추가<br>
-        - NUM_KEYS 상수를 설정하여서 원하는 노드크기의 B+tree를 생성하여 insert 후 만들어진 b+tree를 c로 구현하는것 완료.
-        - enum NodeType
-        - typedef struct _BTreeNode
-        - typedef struct _BStack
-        - typedef struct _BTree
-        - BTreeNode* findValue_ins
-        - void push
-        - BTreeNode* pop
-        - void push_c
-        - int pop_c
-        - void insertKey
-        - void deleteKey
-        - void insert
-        - void insert_in_leaf
-        - void insert_in_parent
-        - void trip
-        - void inorder
+ 	- NUM_KEYS 상수를 설정하여서 원하는 노드크기의 B+tree를 생성하여 insert 후 만들어진 b+tree를 c로 구현하는것 완료.
+ 	- enum NodeType
+ 	- typedef struct _BTreeNode
+ 	- typedef struct _BStack
+ 	- typedef struct _BTree
+ 	- BTreeNode* findValue_ins
+ 	- void push
+ 	- BTreeNode* pop
+ 	- void push_c
+ 	- int pop_c
+ 	- void insertKey
+ 	- void deleteKey
+ 	- void insert
+ 	- void insert_in_leaf
+ 	- void insert_in_parent
+ 	- void trip
+ 	- void inorder
 
  ## doubly linked list 코드 추가<br>
  	- 기존 프로젝트에 singly linked list 코드만 있는 것을 고려해 흔히 쓰이는 data structure 중 doubly linked list 코드를 한글 주석과 함께 추가.
