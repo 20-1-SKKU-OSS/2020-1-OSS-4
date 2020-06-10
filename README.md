@@ -50,6 +50,38 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 **1. Data Structure Project**
  ## b+tree 추가<br>
         - NUM_KEYS 상수를 설정하여서 원하는 노드크기의 B+tree를 생성하여 insert 후 만들어진 b+tree를 c로 구현하는것 완료.
+	1. enum NodeType
+-  노드의 타입(ROOT, INTERNAL, LEAF) 를 결정하는 열거형 변수 선언
+2. typedef struct _BTreeNode
+ - 노드에 있는 key들과 child 노드의 배열이 정의되어있다.
+3. typedef struct _BStack
+ - 데이터 삽입에 필요한 스택구조를 선언.
+4. typedef struct _BTree
+ - B+tree 선언, roor Node의 주소값을 가지고 있다.
+5. BTreeNode* findValue_ins
+ - insert를 하기위해 target node를 반환하는 함수.
+5. void push;
+ - 스택에 key값을 push하는 함수
+6. BTreeNode* pop
+ - 스택에서key값을 pop하는 함수
+7. void push_c
+ - 스택에 child값을 push하는 함수
+8. int pop_c
+ - 스택에서 child값을 pop하는 함수
+9. void insertKey
+ - node에 target key를 insert하는 함수 
+10. void deleteKey
+ - node에서 target key를 delete하는 함수
+11. void insert
+ - BTree에 terget value를 삽입하는 함수
+12. void insert_in_leaf
+ - insert함수 내부에서 재귀적으로 호출되는 함수
+13. void insert_in_parent
+ - insert함수 내부에서 재귀적으로 호출되는 함수
+14. void trip
+ - b+tree를 출력하는 함수
+15. void inorder
+ - trip 함수 내에서 호출되면서 indorder trip을 하는 함수
  ## doubly linked list 코드 추가<br>
  	- 기존 프로젝트에 singly linked list 코드만 있는 것을 고려해 흔히 쓰이는 data structure 중 doubly linked list 코드를 한글 주석과 함께 추가.
  ## 한글 주석 추가<br>
