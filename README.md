@@ -49,7 +49,24 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 ## 프로젝트별 진행 사항
 **1. Data Structure Project**
  ## b+tree 추가<br>
-        - NUM_KEYS 상수를 설정하여서 원하는 노드크기의 B+tree를 생성하여 insert 후 만들어진 b+tree를 c로 구현하는것 완료.
+ 	- NUM_KEYS 상수를 설정하여서 원하는 노드크기의 B+tree를 생성하여 insert 후 만들어진 b+tree를 c로 구현하는것 완료.
+ 	- enum NodeType
+ 	- typedef struct _BTreeNode
+ 	- typedef struct _BStack
+ 	- typedef struct _BTree
+ 	- BTreeNode* findValue_ins
+ 	- void push
+ 	- BTreeNode* pop
+ 	- void push_c
+ 	- int pop_c
+ 	- void insertKey
+ 	- void deleteKey
+ 	- void insert
+ 	- void insert_in_leaf
+ 	- void insert_in_parent
+ 	- void trip
+ 	- void inorder
+
  ## doubly linked list 코드 추가<br>
  	- 기존 프로젝트에 singly linked list 코드만 있는 것을 고려해 흔히 쓰이는 data structure 중 doubly linked list 코드를 한글 주석과 함께 추가.
  ## 한글 주석 추가<br>
@@ -57,10 +74,11 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 	- 기존 프로젝트에 있던 코드 queue.c에 한글 주석 추가
  ## sorting 코드 추가<br>
  	- Card_Sort 코드 추가 
-	(원하는 만큼의 카드 개수를 입력 받은 뒤 그 개수만큼 카드를 입력 받아 카드 규칙대로 배열)
+	(카드 개수와 그 개수만큼 카드를 입력 받아 카드 규칙대로 배열)
 	- Word Sort 코드 추가 
-	(원하는 만큼의 단어 개수를 입력 받은 뒤 그 개수만큼 단어를 입력 받아 같은 단어가 여러번 입력 될 경우 입력된 횟수가 많은 순으로 단어를 배열 후 알파벳 순으로 배열)
-	- Bitonic Sort 코드 추가 ( 주어진 수열을 재귀적으로 바이토닉 수열 (증가 감소가 한번만 바뀌는 수열)을 만들고 그 수열을 재귀적으로 병합하여 정렬하는 알고리즘)
+	(단어 개수와 그 개수만큼 단어를 입력 받아 같은 단어가 여러번 입력 될 경우 입력된 횟수가 많은 순으로 단어를 배열 후 알파벳 순으로 배열)
+	- Bitonic Sort 코드 추가 
+	( 주어진 수열을 재귀적으로 바이토닉 수열 (증가 감소가 한번만 바뀌는 수열)을 만들고 그 수열을 재귀적으로 병합하여 정렬하는 알고리즘)
 
 .<br><br>
 **2. MISC Project**
@@ -82,6 +100,15 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 	- Vector의 내적과 길이 구현 (InnerProduct, VectorLength)
 	- 두 Vector 사이 각(cos), Vector의 사영 구현 (VectorAngleCos, VectorProjection)
 	
+ ## Matrix(행렬) 구조체와 관련 연산 추가 <br>
+	- Matrix 구조체 및 생성자 추가(Matrix, MakeMatrix)
+	- Matrix의 스칼라곱, Matrix간 합 구현 (MatrixScalarMulitiplication, MatrixAdd)
+	- Matrix 출력 함수 구현 (PrintMatrix)
+	- Matrix의 전치(Transpose) 구현 (Transpose)
+	- 두 Matrix간의 곱 구현 (MatrixMultiplication)
+	- 정방행렬(Square Matrix), 대칭행렬(Symmetric Matrix) 판별 함수 구현 (isSquareMatrix, isSymmetric Matrix)
+	- Matrix의 역행렬 구현 진행중 (InverseMatrix)
+	
 ## MIPS Architecture Operation Simulator 기능 추가 <br>
 	- cmd를 이용한 shell로 명령어를 실행해 MIPS Architecture 기반 instruction을 시뮬레이션할 수 있음(.bin, .dat 등의 바이너리 파일을 이용할 수 있음)
 	- read <filename>: 지정된 파일을 읽어 instruction의 형태로 출력함
@@ -90,14 +117,7 @@ https://20-1-skku-oss.github.io/2020-1-OSS-4/
 	- [WIP V3] run [number]: 가상 instruction memory에 저장된 instruction을 실행하여 가상 register에 반영
 		- [number]: 지정한 숫자만큼의 명령어를 실행함(지정하지 않는 경우 instruction 끝까지 실행함)
 	- registers: 현재 register 값들을 출력함($0 ~ #31, PC, HI LO)
-	
- ## Matrix(행렬) 구조체와 관련 연산 추가 <br>
-	- Matrix 구조체 및 생성자 추가(Matrix, MakeMatrix)
-	- Matrix의 스칼라곱, Matrix간 합 구현 (MatrixScalarMulitiplication, MatrixAdd)
-	- Matrix 출력 함수 구현 (PrintMatrix)
-	- Matrix의 전치(Transpose) 구현 (Transpose)
-	- 두 Matrix간의 곱 구현 (MatrixMultiplication)
-	- 정방행렬(Square Matrix), 대칭행렬(Symmetric Matrix) 판별 함수 구현 (isSquareMatrix, isSymmetric Matrix)
+
 
 
 ## 기존 프로젝트 내용
@@ -287,6 +307,7 @@ This directory contains
 >  * 알고리즘상의 에러 제거 <br>
 > 2. Issue 추가 및 관리 <br>
 > 3. ReadMe 관리 및 기여한 내용 반영<br>
->  * MISC 프로젝트 진행 사항 및 완료 사항 정리
+>  * MISC 프로젝트 진행 사항 및 완료 사항 정리 <br>
+> 4. ReadMe 총 관리 <br>
 
 
