@@ -288,6 +288,7 @@ This directory contains
 >  * 알고리즘상의 에러 제거 <br>
 > 2. Issue 추가 및 관리 <br>
 > 3. ReadMe 관리 및 기여한 내용 반영<br>
->  * MISC 프로젝트 진행 사항 및 완료 사항 정리
+>  * MISC 프로젝트 진행 사항 및 완료 사항 정리 <br>
+> 4. ReadMe 총 관리 <br>
 
 
